@@ -40,46 +40,55 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.info', {
+    url: '/info',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-info': {
+        templateUrl: 'templates/tab-info.html',
+        controller: 'InfoCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.links', {
+      url: '/links',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-links': {
+          templateUrl: 'templates/tab-links.html',
+          controller: 'LinksCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.dicas', {
+      url: '/dicas',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-dicas': {
+          templateUrl: 'templates/tab-dicas.html',
+          controller: 'DicasCtrl'
+        }
+      }
+    })
+    .state('tab.link-detail', {
+      url: '/links/:linkId',
+      views: {
+        'tab-links': {
+          templateUrl: 'templates/link-detail.html',
+          controller: 'LinkDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.share', {
+    url: '/share',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-share': {
+        templateUrl: 'templates/tab-share.html',
+        controller: 'ShareCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/links');
 
 });

@@ -1,0 +1,28 @@
+
+<ion-view view-title="{{link.name}}">
+  <ion-content class="padding">
+
+    <div class = "card">
+        <div class = "item item-avatar">
+           <img ng-src="{{link.img}}">
+           <h2>{{link.name}}</h2>
+        </div>
+     
+        <div class = "item item-body">
+           <p>
+             Nome :  {{link.name}}
+            </p>
+            <p>
+             Descricao : {{link.Description}}
+            </p>
+            <p>
+             Link : {{link.URL}}
+            </p>
+            <p>
+             Confiavel : <span ng-if="link.Safe_Browsing">Sim</span> <span ng-if="!link.Safe_Browsing">Se liga, pesquise mais!</span> 
+            </p>
+        
+        </div>
+     </div>
+  </ion-content>
+</ion-view>

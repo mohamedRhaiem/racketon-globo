@@ -1,0 +1,10 @@
+<ion-view view-title="Links">
+  <ion-content class="padding"> 
+    <ion-list>
+      <ion-item class="item-remove-animate item-right item-icon-left" ng-repeat="link in links" type="item-text-wrap" href="#/tab/links/{{link.id}}" ng-class="{'custom-background-trust': link.Safe_Browsing, 'custom-background-fake':!link.Safe_Browsing}">
+        <i class="icon icon-accessory" ng-class="{'ion-checkmark-round': link.Safe_Browsing, 'ion-close-round':!link.Safe_Browsing}"></i>
+        <p>{{link.name}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
